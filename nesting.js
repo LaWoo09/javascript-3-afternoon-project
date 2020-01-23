@@ -79,19 +79,15 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-
 function removeDuplicates() {
-  let copyArr = workplaceAccidents.splice();
-  workplaceAccidents.map((id, index )=> {
-    copyArr.map(id2 => {
-      if(id === id2) {
-        workplaceAccidents.splice(index, 1)
-      }
-    })
+  let a = [];
+  workplaceAccidents.map(x => {
+    if(!a.includes(x)) {
+      a.push(x)
+    }
   })
-  return workplaceAccidents;
+  return a;
 }
-
 
 ////////// PROBLEM 3 //////////
 
